@@ -1,0 +1,6 @@
+http://kdreams.jp/index.php?kcd=&yyfm=%d&mmfm=%02d&ddfm=%02d&yyto=%d&mmto=%02d&ddto=%02d&gr=&ac=Result_List&sd=&page=%d
+(\d*)件中 \d*～\d*件表示
+\d*
+<td>(.*)</td>
+<li\sclass="BtnResultRaceNormal"><a\shref="(.*)">通常車券
+>(\d*)-(\d*)-(\d*)<
