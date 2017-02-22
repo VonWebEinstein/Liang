@@ -67,7 +67,18 @@ for date=1:length(queryDate)%遍历要查询的日期
                     d=d-1;
                 end
                 %分母
-                [~,index]=ismember(searchNO(cols{k}),fenmuOri{k}(:,1:end-1),'rows');
+                % 若当前填充的是二联复等，则排序查询的searchNO
+                key = searchNO(cols{k});
+                if ismember(fenmustr{k}, {'B012','C0','B2'})
+                    key = sort(key);                    
+                end
+                [existance,index]=ismember(key,fenmuOri{k}(:,1:end-1),'rows');
+                % existance == 0, 说明分母中无此项
+                if ~existance
+                    str_tmp = '分母中无此项';
+                    set(hanles.text_updateStatus, 'string', str_tmp);
+                    error(str_tmp);                    
+                end
                 fenmu=fenmuOri{k}(index,end);
                 singlRecord{4+k}=sprintf('%dR%d=%0.2f',record(j,2),record(j,rewardLocation(k)),(record(j,2)+d)/fenmu);
             end

@@ -22,7 +22,7 @@ function varargout = vonweb(varargin)
 
 % Edit the above text to modify the response to help vonweb
 
-% Last Modified by GUIDE v2.5 25-Dec-2016 21:07:08
+% Last Modified by GUIDE v2.5 21-Feb-2017 15:43:20
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -55,9 +55,13 @@ function vonweb_OpeningFcn(hObject, eventdata, handles, varargin)
 %initialize
 handles.matchname={'01_桐　生','02_戸　田','03_江戸川','04_平和島','05_多摩川','06_浜名湖','07_蒲　郡','08_常　滑','09_津',...
             '10_三　国','11_琵琶湖','12_住之江','13_尼　崎','14_鳴　門','15_丸　亀','16_児　島','17_宮　島','18_徳　山','19_下　関',...
-            '20_若　松','21_芦　屋','22_福　岡','23_唐　津','24_大　村','25_組合(桐蒲住丸若)','26_組合(戸江平多浜常)',...
-            '27_組合(津三琵尼鳴児)','28_組合(宮徳下芦福唐大)', '29_組合(半天)','30_組合(全天)', ...
-            '31_大组(12)', '32_大组(13)', '33_大组(14)', '34_大组(23)', '35_大组(24)', '36_大组(34)' };
+            '20_若　松','21_芦　屋','22_福　岡','23_唐　津','24_大　村',...
+            '25_組合(桐蒲住丸若)','26_組合(戸江平多浜常)',...
+            '27_組合(津三琵尼鳴児)','28_組合(宮徳下芦福唐大)', '29_組合(半天)','30_組合(全天)',...
+            ...
+            '31_大组(桐蒲住丸若戸江平多浜常)', '32_大组(桐蒲住丸若津三琵尼鳴児)', ...
+            '33_大组(桐蒲住丸若宮徳下芦福唐大)', '34_大组(戸江平多浜常津三琵尼鳴児)', ...
+            '35_大组(戸江平多浜常宮徳下芦福唐大)', '36_大组(津三琵尼鳴児宮徳下芦福唐大)' };
 set(handles.popupmenu1,'String',handles.matchname);
 set(handles.popupmenu1,'Value',1);
 handles.matchStyle={'単勝式','2連勝単式','2連勝複式','3連勝単式','3連勝複式','拡連複'};
@@ -677,6 +681,8 @@ if isempty(s1)
     end
 end
 
+set(handles.text_updateStatus, 'string', '正在查询');
+pause(0.01);
 searchNO=arrayfun(@(x) str2double(s1{1}{x}), 1:length(s1{1})); %查询的警报
 
 l=length(searchNO);
@@ -899,3 +905,13 @@ function togglebutton36_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of togglebutton36
+
+
+
+
+
+% --- Executes when buttonPanel is resized.
+function buttonPanel_ResizeFcn(hObject, eventdata, handles)
+% hObject    handle to buttonPanel (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
