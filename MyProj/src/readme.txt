@@ -15,7 +15,7 @@ MATLAB Compiler
 
   (2) run the MCR Installer.
 
-Or download the Windows 32-bit version of the MCR for R2013a 
+Or download the Windows 64-bit version of the MCR for R2013a 
 from the MathWorks Web site by navigating to
 
    http://www.mathworks.com/products/compiler/mcr/index.html
@@ -33,7 +33,6 @@ NOTE: You will need administrator rights to run MCRInstaller.
 
 Files to package for Standalone 
 ================================
--MyProj.ctf (component technology file)
 -MyProj.exe
 -MCRInstaller.exe 
    -if end users are unable to download the MCR using the above  

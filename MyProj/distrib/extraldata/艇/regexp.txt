@@ -1,4 +1,0 @@
-http://kyotei.sakura.ne.jp/kekka_kako.php?y=%d&m=%02d&d=%02d
-<td\scolspan="14"\salign="left"\svalign="middle"\sbgcolor="#eeeeee"><font\ssize="3">#\s*(\S*)\s*<strong>\s*(\S*)\s*</strong>\s*¸‚Í§ˆö</font>.*?</table>
-<img\ssrc="\.\./img/(.*?)\.gif"
-bgcolor="#FFFFCC"><font\ssize="3">\s*(\S*)\s*</font></td>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.deploytool" plugin-version="1.0">
-  <configuration target="target.standalone.win" target-name="Windows Standalone Application" name="MyProj" location="D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang" file="D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang\MyProj.prj" preferred-package-type="package.type.exe" build-checksum="3278099528" preferred-package-location="D:\Program Files\MATLAB\R2013a\bin\WorkSpace\Liang">
-    <param.project.name>D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang\MyProj.prj</param.project.name>
+  <configuration target="target.standalone.win" target-name="Windows Standalone Application" name="MyProj" location="C:\Users\vonweber\Documents\MATLAB\Liang" file="C:\Users\vonweber\Documents\MATLAB\Liang\MyProj.prj" preferred-package-type="package.type.exe" build-checksum="1545163070" preferred-package-location="C:\Users\vonweber\Documents\MATLAB\Liang">
+    <param.project.name>C:\Users\vonweber\Documents\MATLAB\Liang\MyProj.prj</param.project.name>
     <param.target.type>Windows Standalone Application</param.target.type>
     <param.appname>MyProj</param.appname>
     <param.intermediate>${PROJECT_ROOT}\MyProj\src</param.intermediate>
     <param.output>${PROJECT_ROOT}\MyProj\distrib</param.output>
-    <param.embed.ctf>false</param.embed.ctf>
+    <param.embed.ctf>true</param.embed.ctf>
     <param.tbx_on_path>
       <item>all</item>
     </param.tbx_on_path>
@@ -38,6 +38,7 @@
       <param.appname />
       <param.intermediate />
       <param.output />
+      <param.embed.ctf />
       <param.tbx_on_path />
       <param.warnings />
       <param.version />
@@ -64,18 +65,17 @@
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file name="MyProj.exe" location="${PROJECT_ROOT}\MyProj\distrib" optional="false">D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang\MyProj\distrib\MyProj.exe</file>
-      <file name="readme.txt" location="${PROJECT_ROOT}\MyProj\distrib" optional="true">D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang\MyProj\distrib\readme.txt</file>
-      <file name="MyProj.ctf" location="${PROJECT_ROOT}\MyProj\distrib" optional="false">D:\Program Files (x86)\MATLAB\R2013a\bin\workspace\Liang\MyProj\distrib\MyProj.ctf</file>
+      <file name="MyProj.exe" location="${PROJECT_ROOT}\MyProj\distrib" optional="false">C:\Users\vonweber\Documents\MATLAB\Liang\MyProj\distrib\MyProj.exe</file>
+      <file name="readme.txt" location="${PROJECT_ROOT}\MyProj\distrib" optional="true">C:\Users\vonweber\Documents\MATLAB\Liang\MyProj\distrib\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>D:\Program Files (x86)\MATLAB\R2013a</root>
+      <root>D:\MATLAB\R2013a</root>
       <toolboxes>
         <toolbox name="fixedpoint" />
       </toolboxes>
       <path>
-        <directory>C:\Users\von Weber\Documents\MATLAB</directory>
+        <directory>C:\Users\vonweber\Documents\MATLAB</directory>
         <directory>${MATLAB_ROOT}\toolbox\hdlcoder\matlabhdlcoder\matlabhdlcoder</directory>
         <directory>${MATLAB_ROOT}\toolbox\hdlcoder\matlabhdlcoder</directory>
         <directory>${MATLAB_ROOT}\toolbox\matlab\testframework</directory>
@@ -114,6 +114,14 @@
         <directory>${MATLAB_ROOT}\toolbox\matlab\verctrl</directory>
         <directory>${MATLAB_ROOT}\toolbox\matlab\winfun</directory>
         <directory>${MATLAB_ROOT}\toolbox\matlab\winfun\NET</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\components</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\dee</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\AUTOSAR\AUTOSAR\dataclasses</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\AUTOSAR\AUTOSAR</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\accel</directory>
+        <directory>${MATLAB_ROOT}\toolbox\coder\simulinkcoder_core</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\blocks\library</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\blocks\obsolete</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\blocks</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\fixedandfloat</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\fixedandfloat\obsolete</directory>
@@ -122,12 +130,22 @@
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\MPlayIO</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\dataobjectwizard</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\slresolve</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\dataclasses</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\aerospace</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\automotive</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\simfeatures</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\automotive\fuelsys</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\simgeneral</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simdemos\industrial</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\modeladvisor</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\modeladvisor\fixpt</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\glue</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\glue\studio</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\frameedit</directory>
+        <directory>${MATLAB_ROOT}\toolbox\stateflow\stateflow</directory>
+        <directory>${MATLAB_ROOT}\toolbox\stateflow\coder</directory>
+        <directory>${MATLAB_ROOT}\toolbox\stateflow\sfdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\aero\aero</directory>
         <directory>${MATLAB_ROOT}\toolbox\aeroblks\aeroblks</directory>
         <directory>${MATLAB_ROOT}\toolbox\aeroblks\aeroblksutilities</directory>
@@ -146,7 +164,9 @@
         <directory>${MATLAB_ROOT}\toolbox\bioinfo\biodemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\matlabcoder</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\codegendemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\coder\connectivity</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\emlcodermex</directory>
+        <directory>${MATLAB_ROOT}\toolbox\coder\coverage</directory>
         <directory>${MATLAB_ROOT}\toolbox\rtw\rtw</directory>
         <directory>${MATLAB_ROOT}\toolbox\rtw\targets\shared</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\foundation</directory>
@@ -181,9 +201,6 @@
         <directory>${MATLAB_ROOT}\toolbox\curvefit\curvefitdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\daq\daq</directory>
         <directory>${MATLAB_ROOT}\toolbox\daq\daqguis</directory>
-        <directory>${MATLAB_ROOT}\toolbox\daq\daqblks\daqblks</directory>
-        <directory>${MATLAB_ROOT}\toolbox\daq\daqblks\daqmasks</directory>
-        <directory>${MATLAB_ROOT}\toolbox\daq\daqblks\daqmex</directory>
         <directory>${MATLAB_ROOT}\toolbox\daq\daqdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\database\database</directory>
         <directory>${MATLAB_ROOT}\toolbox\database\vqb</directory>
@@ -228,6 +245,7 @@
         <directory>${MATLAB_ROOT}\toolbox\shared\tlmgenerator\foundation\rtw</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\tlmgenerator\foundation\tlmgeneratordemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\edalink\foundation\hdllink</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\target\kernel\embedded</directory>
         <directory>${MATLAB_ROOT}\toolbox\eml\eml</directory>
         <directory>${MATLAB_ROOT}\toolbox\exlink</directory>
         <directory>${MATLAB_ROOT}\toolbox\dsp\filterdesign</directory>
@@ -238,16 +256,17 @@
         <directory>${MATLAB_ROOT}\toolbox\finance\findemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\fininst\fininst</directory>
         <directory>${MATLAB_ROOT}\toolbox\fininst\fininstdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\fixedpoint\fixedpointtool</directory>
         <directory>${MATLAB_ROOT}\toolbox\fixedpoint\fidemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\fixedpoint\fixedpoint</directory>
+        <directory>${MATLAB_ROOT}\toolbox\fixpoint</directory>
+        <directory>${MATLAB_ROOT}\toolbox\fixpoint\fpca</directory>
         <directory>${MATLAB_ROOT}\toolbox\simulink\fixedandfloat\fxpdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\float2fixed</directory>
         <directory>${MATLAB_ROOT}\toolbox\coder\float2fixed\dmm_emlauthoring</directory>
         <directory>${MATLAB_ROOT}\toolbox\fuzzy\fuzzy</directory>
         <directory>${MATLAB_ROOT}\toolbox\fuzzy\fuzzyutil</directory>
         <directory>${MATLAB_ROOT}\toolbox\fuzzy\fuzdemos</directory>
-        <directory>${MATLAB_ROOT}\toolbox\gauges</directory>
-        <directory>${MATLAB_ROOT}\toolbox\gauges\gaugesdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\geoweb\geoweb</directory>
         <directory>${MATLAB_ROOT}\toolbox\globaloptim</directory>
         <directory>${MATLAB_ROOT}\toolbox\globaloptim\globaloptim</directory>
@@ -402,17 +421,141 @@
         <directory>${MATLAB_ROOT}\toolbox\phased\phased</directory>
         <directory>${MATLAB_ROOT}\toolbox\phased\phasedapps</directory>
         <directory>${MATLAB_ROOT}\toolbox\phased\phaseddemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\dataservices\core\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\dataservices\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\data\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\foundation\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\gl\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\gl\sli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\common\units\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\drive\drive</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\drive\drivedemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\elec\elec</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\elec\elecdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\equation_language\equation_language</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\gui\gfx\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\mech\mech</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\mech\importer</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\mech\mechdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\network_engine\ne_support</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\network_engine\network_engine</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\ne_sli\ne_sli</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\pm_sli\pm_sli</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\pm_visimpl\pm_visimpl</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powersys</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\DR\DR</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\drives\drives</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\facts\facts</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\DR\DRdemo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\drives\drivesdemo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\facts\factsdemo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo\machines</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo\meascontrol</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo\power_electronics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo\power_utility</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\powersys\powerdemo\simple</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sdl\sdl</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sdl\classic</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sdl\sdldemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sh\sh</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sh\shdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simrf\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\compiler\core\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\compiler\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\compiler\sli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\simscapedemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\engine\core\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\engine\mli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\engine\sli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\foundation\simscape</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\library\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\simscape\simscape\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\core\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\wing_landing_gear</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\wing_landing_gear\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\cart_double_pendulum</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\cart_double_pendulum\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\stewart_platform</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\stewart_platform\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\double_crank_aiming</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\double_crank_aiming\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\bread_slicer</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\bread_slicer\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\import\stewart_platform</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\import\four_bar</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\radial_engine</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\radial_engine\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\double_wishbone_suspension</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\double_wishbone_suspension\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\import\robot</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\cardan_gear</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\cardan_gear\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\windshield_wiper</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\windshield_wiper\images</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\smdemos\backhoe</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\gui\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\import\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\local\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\sli\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\sm\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\physmod\sm\ssci\m</directory>
+        <directory>${MATLAB_ROOT}\toolbox\plccoder\plccoder</directory>
+        <directory>${MATLAB_ROOT}\toolbox\plccoder\plugins\omron</directory>
+        <directory>${MATLAB_ROOT}\toolbox\plccoder\plccoderdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\qualkits\common</directory>
+        <directory>${MATLAB_ROOT}\toolbox\realtime</directory>
+        <directory>${MATLAB_ROOT}\toolbox\realtime\realtime</directory>
+        <directory>${MATLAB_ROOT}\toolbox\realtime\realtime\rtw</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\reqmgt</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\reqmgt\RTExplorer</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\slvnv</directory>
         <directory>${MATLAB_ROOT}\toolbox\rf\rf</directory>
         <directory>${MATLAB_ROOT}\toolbox\rf\rfnetparamfiles</directory>
         <directory>${MATLAB_ROOT}\toolbox\rf\rftool</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rfblks\rfblks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rfblks\rfblksmasks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rfblks\rfblksmex</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rfblks\rfblksdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\rf\rfdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\robust</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctlmi</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctutil</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctobsolete\robust</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctobsolete\lmi</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctobsolete\mutools\commands</directory>
+        <directory>${MATLAB_ROOT}\toolbox\robust\rctobsolete\mutools\subs</directory>
+        <directory>${MATLAB_ROOT}\help\toolbox\robust\examples</directory>
         <directory>${MATLAB_ROOT}\toolbox\rptgen\rptgen</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\rptgenext</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\rptgenextdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\rptgenextdemos\flutter_suppression</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\rptgenextdemos\sdd</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\slxmlcomp</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rptgenext\rptgenextdemos\slxmlcomp</directory>
         <directory>${MATLAB_ROOT}\toolbox\rptgen\rptgendemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\rptgen\xmlcomp</directory>
         <directory>${MATLAB_ROOT}\toolbox\rptgen\xmlcomp\demos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\asap2\asap2\dataclasses</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\asap2\asap2</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\asap2\asap2\user</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\common\can\blocks\dataclasses</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\common\can\blocks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\common\can\blocks\tlc_c</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\common\tgtcommon</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\connectivity</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\pil</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\rtw\cgv\API</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\rtw\misra</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulinkcoder</directory>
         <directory>${MATLAB_ROOT}\toolbox\rtw\targets\rtwin\rtwin</directory>
         <directory>${MATLAB_ROOT}\toolbox\rtw\targets\rtwin\rtwindemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\rtwdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\rtwdemos\rsimdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\blocks\sb2sl</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\advisor</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\asynciolib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\can</directory>
@@ -467,15 +610,19 @@
         <directory>${MATLAB_ROOT}\toolbox\shared\multimedia</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\optimlib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\rptgen</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\sigbldr</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\siglib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\slcontrollib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\sldv</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\slvnv</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\simcoverage</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\spcuilib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\statslib</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\system\coder</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\system\coreblocks</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\system\fixedpoint</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\system\sfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\system\simulink</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\testconsole</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\general</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\graphics</directory>
@@ -488,10 +635,65 @@
         <directory>${MATLAB_ROOT}\toolbox\signal\sigtools</directory>
         <directory>${MATLAB_ROOT}\toolbox\signal\sptoolgui</directory>
         <directory>${MATLAB_ROOT}\toolbox\signal\sigdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simbio\simbio</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simbio\simbiodemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simevents\simevents</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simevents\simevents\icons</directory>
+        <directory>${MATLAB_ROOT}\toolbox\des\desblks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\des\desmasks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\des\desmex</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simevents\examples</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simrf\simrf</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simrf\simrfV2</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simrf\simrfV2masks</directory>
+        <directory>${MATLAB_ROOT}\help\toolbox\simrf\examples</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simrf\simrfV2demos</directory>
         <directory>${MATLAB_ROOT}\toolbox\shared\simulink</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sl3d\sl3d</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sl3d\sl3ddemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slci\slci</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slci\slcidemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slcontrol\slcontrol</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slcontrol\slctrlguis</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slcontrol\slctrlutil</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slcontrol\slctrlobsolete</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slcontrol\slctrldemos</directory>
+        <directory>${MATLAB_ROOT}\help\toolbox\slcontrol\examples</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldoguis</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sloptim\sloptim</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sloptim\sloptguis</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sloptim\sloptobsolete</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\slestim\slestguis</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\slestim\slestim</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\slestim\slestmex</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\slestim\slestutil</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldodemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldodemos\optim</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldodemos\estim</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldodemos\estim\docexamples\adaptive</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldo\sldodemos\estim\docexamples\lookuptable</directory>
+        <directory>${MATLAB_ROOT}\help\toolbox\sldo\examples</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldv\sldv</directory>
+        <directory>${MATLAB_ROOT}\toolbox\sldv\sldvdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\slproject</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\slvnvdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\rmidemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\simcovdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\do178b</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\iec61508</directory>
+        <directory>${MATLAB_ROOT}\toolbox\slvnv\styleguide</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\iodata\iomap</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\iodata\ioedit</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\iodata\ioedit\util</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\performance</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\performance\performancea</directory>
+        <directory>${MATLAB_ROOT}\toolbox\simulink\simulink\upgradeadvisor</directory>
         <directory>${MATLAB_ROOT}\toolbox\stats\stats</directory>
         <directory>${MATLAB_ROOT}\toolbox\stats\classreg</directory>
         <directory>${MATLAB_ROOT}\toolbox\stats\statsdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\stm\stm</directory>
+        <directory>${MATLAB_ROOT}\toolbox\stm\stmdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\symbolic\symbolic</directory>
         <directory>${MATLAB_ROOT}\toolbox\symbolic\symbolicdemos</directory>
         <directory>${MATLAB_ROOT}\toolbox\systemtest\systemtest</directory>
@@ -569,6 +771,12 @@
         <directory>${MATLAB_ROOT}\toolbox\wavelet\wmultisig1d</directory>
         <directory>${MATLAB_ROOT}\toolbox\wavelet\wavedemo</directory>
         <directory>${MATLAB_ROOT}\toolbox\wavelet\compression</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\xpc</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\target\build\xpcblocks\thirdpartydrivers</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\target\build\xpcblocks</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\target\build\xpcobsolete</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\xpcdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\rtw\targets\xpc\xpc\xpcmngr</directory>
       </path>
     </matlab>
     <platform>
@@ -581,9 +789,9 @@
       <linux>false</linux>
       <solaris>false</solaris>
       <osver>6.2</osver>
-      <os32>true</os32>
-      <os64>false</os64>
-      <arch>win32</arch>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
       <matlab>true</matlab>
     </platform>
   </configuration>

@@ -1,7 +1,0 @@
-http://keiba.yahoo.co.jp
-http://keiba.yahoo.co.jp/schedule/list/%d/?month=%d
-<td>(\d*)»’£®.£©</td>
-<td\sclass="wsLB"><a\shref="(.*?)">
-<table.*?/table>
-class="txC"\srowspan=".">(.*?)<|(\d*)∑¨»Àö›
-\d*

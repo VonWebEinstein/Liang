@@ -1,7 +1,0 @@
-中馬的网站
-查询某个月结果的页面地址
-从某个月结果的页面tokens比赛的日期
-从某个月结果的页面tokens比赛结果的地址
-从某场次的比赛结果页面match表格
-从第2,3个表格的单个单元格tokens枠連，馬連等类型和人気数值,用于parseTableFromHTML函数
-从单个单元格match枠連，馬連，人気的数字，用于parseTableFromHTML函数

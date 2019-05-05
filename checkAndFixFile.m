@@ -9,9 +9,9 @@ if isempty(mat)
 end
 % dataOfLastDay=data(data(:,1)==date(end,1), :);
 m=size(mat,1);
-if isequal(mat, data(end-m+1:end,:)) 
+if isequal(mat, data((end-m+1):end,:)) 
 else %更改最后一天的结果
-    data(end-m+1:end,:)=mat;
+    data((end-m+1):end,:)=mat;
     fp = fopen(fileStr, 'wt');
     str='';
     for i=1:n-1

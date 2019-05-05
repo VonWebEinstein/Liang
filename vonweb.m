@@ -64,6 +64,7 @@ handles.matchname={'01_桐　生','02_戸　田','03_江戸川','04_平和島','05_多摩川','
             '35_大组(戸江平多浜常宮徳下芦福唐大)', '36_大组(津三琵尼鳴児宮徳下芦福唐大)' };
 set(handles.popupmenu1,'String',handles.matchname);
 set(handles.popupmenu1,'Value',1);
+
 handles.matchStyle={'単勝式','2連勝単式','2連勝複式','3連勝単式','3連勝複式','拡連複'};
 set(handles.popupmenu2,'String',handles.matchStyle);
 set(handles.popupmenu2,'Value',4);
@@ -72,7 +73,6 @@ set(handles.uitable,'Data',{});
 set(handles.edit3,'String',datestr(today,'yyyymmdd'));
 
 handles.hpath='.\history\艇\';
-
 handles.loaded=0;
 % Choose default command line output for vonweb
 handles.output = hObject;
@@ -115,16 +115,42 @@ handles.isChoosed = getButtonPanelValue(handles);
 % end
 Cdata(~logical(handles.isChoosed))={[]};
 
-imname=[datestr(now,29),'-','艇'];
+imname=[datestr(now,29),'-','艇-', randsample(['0':'9', 'a':'z'], 4)];
 XX=dealwithBoat(Cdata, handles);
 
 %数据是txt的话，改后缀
-imname=[imname '.xls'];
+imname=[imname '.csv'];
 
 
 %把XX排序
 XX=sortXX(XX);
-xlswrite([pwd,'\', imname],XX);
+
+% 单元格全部转成字符
+for i=1:size(XX,1)
+    for j=1:size(XX,2)
+        if ~ischar(XX{i,j})
+            XX{i,j} = num2str(XX{i,j});
+        end
+    end
+end
+
+
+set(handles.text_updateStatus,'string','正在写入结果...');
+pause(0.1);
+
+
+% save to file 
+% xlswrite([pwd,'\', imname],XX);
+
+% transform for sprintf
+XX = XX';
+
+fmt = [strjoin(repmat({'%s'}, 1, size(XX,1)), ', '), '\n'];
+fid = fopen(imname, 'w');
+fprintf(fid, fmt, XX{:,:});
+fclose(fid);
+
+
 %清除更新分母等标记
 set(handles.updateFenmu,'value',0);
 set(handles.gFenmu,'value',0);
@@ -180,8 +206,6 @@ function updatedata_Callback(hObject, eventdata, handles)
 % hObject    handle to updatedata (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA
-set(handles.text_updateStatus,'String','正在更新數據，暫勿執行其他操作');
-pause(0.1);
 
 parseboat(handles);
 
